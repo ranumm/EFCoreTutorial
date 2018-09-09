@@ -7,16 +7,11 @@ namespace EFCoreTutorial
     {
         static void Main(string[] args)
         {
-            // first do this:
-            // note: need a new migration name each migration
-            // PackageManagerConsole: add-migration CreateSchoolDB
-            //  - or -
-            // DotNet EF Tools: dotnet ef migrations add CreateSchoolDB
+            addBill();
+        }
 
-            // then this:
-            // PackageManagerConsole: update-database –verbose
-            //  - or -
-            // DotNet EF Tools: dotnet ef database update
+        public static void addBill()
+        {
             using (var context = new SchoolContext())
             {
 
