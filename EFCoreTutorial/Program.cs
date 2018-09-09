@@ -16,7 +16,7 @@ namespace EFCoreTutorial
         {
             var context = new SchoolContext();
             var studentsWithSameName = context.Students
-                                              .Where(s => s.Name == getName_Bill())
+                                              .Where(s => s.FirstName == getName_Bill())
                                               .ToList();
         }
 
@@ -32,7 +32,7 @@ namespace EFCoreTutorial
 
                 var std = new Student()
                 {
-                    Name = "Bill"
+                    FirstName = "Bill"
                 };
 
                 context.Students.Add(std);

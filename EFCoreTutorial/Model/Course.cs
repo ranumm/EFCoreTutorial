@@ -8,6 +8,9 @@ namespace EFCoreTutorial.Model
     {
         public int CourseId { get; set; }
 
-        public string CourseName { get; set; }
+        public string Title { get; set; }
+
+        public int Credits { get; set; }
+
     }
 }
