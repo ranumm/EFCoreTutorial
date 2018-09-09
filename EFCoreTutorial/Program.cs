@@ -1,5 +1,6 @@
 ﻿using EFCoreTutorial.Model;
 using System;
+using System.Linq;
 
 namespace EFCoreTutorial
 {
@@ -7,7 +8,21 @@ namespace EFCoreTutorial
     {
         static void Main(string[] args)
         {
-            addBill();
+            getBill();
+            //addBill();
+        }
+
+        public static void getBill()
+        {
+            var context = new SchoolContext();
+            var studentsWithSameName = context.Students
+                                              .Where(s => s.Name == getName_Bill())
+                                              .ToList();
+        }
+
+        public static string getName_Bill()
+        {
+            return "Bill";
         }
 
         public static void addBill()
